@@ -13,13 +13,23 @@
         <h1>Javascript Quiz!</h1>
 
     </header>
+    <div class="container">
+        <div id="quiz" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-btns" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+        </div>
+        <div>
+            <button id="start-btn" class="start-btn btn">Start Quiz</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+        </div>
+        <div id="results"></div>
 
-    <div id="quiz"></div>
-
-    <button id="start-quiz">Start the Quiz</button>
-    
-    <div id="results"></div>
-
+    </div>
 
     <script src="script.js"></script>
 </body>
