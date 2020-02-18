@@ -31,7 +31,7 @@ When the quiz loads:
 
 Main Contributor: Arthur Freeman
 
-
+Tutorial Followed : [https://webdevtrick.com/create-javascript-quiz-program/](https://webdevtrick.com/create-javascript-quiz-program/)
 
 ## License
 
