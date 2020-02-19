@@ -41,17 +41,6 @@ var questions = [
 //Need start button
 var startEl = document.querySelector("#start-btn");
 
-//Timer variables
-var timeLeft = document.querySelector("#time");
-
-var totalTime = 0;
-
-var totalElapsed = 0;
-
-var wrongTime = 10;
-
-var correctTime = 10;
-
 function Quiz(questions) {
     this.score = 0;
     this.questions = questions;
@@ -85,6 +74,18 @@ Question.prototype.isCorrectAnswer = function(choice) {
     return this.answer === choice;
 }
 
+var timeLeft = document.querySelector("#time");
+var secondsLeft = 76;
+function setTime() {
+    var timerInterval = setInterval(function(){
+        secondsLeft--;
+        timeLeft.textContent = secondsLeft;
+        if(secondsLeft === 0){
+            clearInterval(timerInterval);
+        }
+    }, 1000);
+}
+setTime();
 
 function populate() {
 
