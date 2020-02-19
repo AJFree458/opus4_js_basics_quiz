@@ -21,10 +21,10 @@ Not needed for this project.
 
 When the quiz loads:
 
-1.
-2.
-3.
-4.
+    1. Click the Start button to populate the quiz, and start the timer.
+    2. Each answer has its own button. Click an answer, and the quiz will automatically move to the next question.
+    3. When the last question is answered, the score is displayed and an option to add the quiz takers name to a list of scores.
+    4. Click the submit button to add the name from the field provided to the list of quiz takers.
 
 
 ## Credits
