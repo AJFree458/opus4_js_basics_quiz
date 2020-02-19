@@ -124,14 +124,6 @@ function showProgress() {
     element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
 };
 
-function startTimer() {
-    setTime();
-    interval = setInterval(function() {
-      secondsElapsed++;
-      timeLeft();
-    }, 1000);
-  }
-
 function showScores() {
     var gameOverHTML = "<h2>Result</h2>";
     gameOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
