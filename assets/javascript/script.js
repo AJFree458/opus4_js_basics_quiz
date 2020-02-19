@@ -18,6 +18,7 @@ var inputScore = document.createElement("button");
 inputScore.textContent = "Submit";
 var highScorer = document.createElement("input");
 var nameInput = document.getElementsByTagName("input");
+var timerInterval;
 // create questions here
 var questions = [
     new Question("What is the HTML tag under which one can write the Javascript code?", ["&lt;javascript&gt;", "&lt;scripted&gt;","&lt;script&gt;", "&lt;js&gt;"], "&lt;script&gt;"),
@@ -76,20 +77,28 @@ Question.prototype.isCorrectAnswer = function(choice) {
 
 var timeLeft = document.querySelector("#time");
 var secondsLeft = 76;
-function setTime() {
-    var timerInterval = setInterval(function(){
+//function setTime() {
+    // var timerInterval = setInterval(function(){
+    //     secondsLeft--;
+    //     timeLeft.textContent = secondsLeft;
+    //     if(secondsLeft === 0){
+    //         clearInterval(timerInterval);
+    //     }
+    // }, 1000);
+//}
+//setTime();
+
+function populate() {
+    timerInterval = setInterval(function(){
         secondsLeft--;
         timeLeft.textContent = secondsLeft;
         if(secondsLeft === 0){
             clearInterval(timerInterval);
         }
     }, 1000);
-}
-setTime();
-
-function populate() {
 
     if(quiz.isEnded()) {
+        clearInterval(timerInterval);
         showScores();
     }
     else {
